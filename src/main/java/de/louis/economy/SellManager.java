@@ -199,7 +199,7 @@ public class SellManager implements Listener, CommandExecutor {
         if (raw >= ITEM_SLOTS && raw < SIZE) { // untere Reihe ist gesperrt
             e.setCancelled(true);
             if (raw == BUTTON_SLOT && e.getWhoClicked() instanceof Player p) {
-                Bukkit.getScheduler().runTask(plugin, p::closeInventory);
+                Bukkit.getScheduler().runTask(plugin, () -> p.closeInventory());
             }
             return;
         }

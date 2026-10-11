@@ -74,7 +74,7 @@ public class BoardManager implements Listener {
         for (Player p : Bukkit.getOnlinePlayers()) {
             if (!disabled.contains(p.getUniqueId())) create(p);
         }
-        task = Bukkit.getScheduler().runTaskTimer(plugin.owner(), this::updateAll, 20L, interval);
+        task = Bukkit.getScheduler().runTaskTimer(plugin.owner(), () -> updateAll(), 20L, interval);
     }
 
     /** @return true, wenn das Scoreboard jetzt eingeschaltet ist */

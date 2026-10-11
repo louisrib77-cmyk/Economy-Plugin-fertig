@@ -286,14 +286,14 @@ public class SellAllManager implements Listener, CommandExecutor {
         int slot = e.getRawSlot();
         if (slot == SELL_ALL_SLOT) {
             sell(p, null);
-            Bukkit.getScheduler().runTask(plugin, p::closeInventory);
+            Bukkit.getScheduler().runTask(plugin, () -> p.closeInventory());
             return;
         }
         if (slot < 0 || slot >= ITEM_SLOTS || slot >= holder.entries.size()) return;
 
         sell(p, holder.entries.get(slot));
         if (collect(p).isEmpty()) {
-            Bukkit.getScheduler().runTask(plugin, p::closeInventory);
+            Bukkit.getScheduler().runTask(plugin, () -> p.closeInventory());
         } else {
             render(holder, p);
         }
