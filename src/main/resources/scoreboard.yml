@@ -1,0 +1,15 @@
+# Scoreboard (Seitenleiste). MiniMessage-Format. Nach Änderungen: /sb reload oder /eco reload
+# Platzhalter: <player> <money> <bank> <rank> <playtime> <kills> <deaths>
+#   <money> = Bargeld, <bank> = Guthaben auf dem Bankkonto, <rank> = Rang mit Farbe
+title: "<gold><bold>MEIN SERVER"
+update-interval-ticks: 20
+currency-symbol: "$"
+# Maximal 15 Zeilen
+lines:
+  - ""
+  - "<gray>Spieler: <white><player>"
+  - "<gray>Geld: <gold><money>"
+  - "<gray>Bank: <gold><bank>"
+  - "<gray>Spielzeit: <aqua><playtime> Std"
+  - "<gray>Kills: <green><kills>"
+  - "<gray>Tode: <red><deaths>"

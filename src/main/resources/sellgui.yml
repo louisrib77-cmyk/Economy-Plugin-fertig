@@ -1,0 +1,27 @@
+# /sellall - Menü, um alles zu verkaufen, was du im Inventar hast.
+# Die Verkaufspreise stehen in prices.yml. Nach Änderungen: /eco reload
+
+# true = auch Items in der Schnellleiste (Hotbar) werden mitverkauft
+include-hotbar: true
+
+messages:
+  title: "<dark_gray>Inventar verkaufen"
+  info-name: "<gold><bold>Dein Geld"
+  info-lore:
+    - "<gray>Kontostand: <gold><money>"
+  sell-all-name: "<green><bold>Alles verkaufen"
+  sell-all-lore:
+    - "<gray>Items: <white><count>"
+    - "<gray>Gesamtwert: <gold><money>"
+    - ""
+    - "<yellow>Klicke, um alles zu verkaufen."
+  item-lore:
+    - "<gray>Anzahl: <white><count>"
+    - "<gray>Preis: <gold><price><gray> pro Stück"
+    - "<gray>Wert: <gold><value>"
+    - ""
+    - "<yellow>Klicke, um alles davon zu verkaufen."
+  sold-all: "<gray>Du hast <white><count><gray> Items für <gold><money><gray> verkauft."
+  sold-one: "<gray>Du hast <white><count>x <item><gray> für <gold><money><gray> verkauft."
+  nothing-to-sell: "<red>Du hast nichts im Inventar, was man verkaufen kann."
+  error: "<red>Beim Verkaufen ist ein Fehler passiert. Du hast deine Items behalten."

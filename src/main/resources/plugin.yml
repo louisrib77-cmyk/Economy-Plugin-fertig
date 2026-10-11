@@ -1,0 +1,85 @@
+name: LouisEconomy
+version: '2.1.0'
+main: de.louis.economy.LouisEconomy
+api-version: '26.2'
+depend: [JobsPlugin]
+description: Wirtschaft, Shop, Staatssystem (Raenge, Bank, Steuern, Staatskasse) und Scoreboard in einem Plugin
+author: Louis
+commands:
+  pay:
+    description: Geld an einen Spieler senden
+    usage: /pay <Spieler> <Betrag>
+    permission: louiseconomy.pay
+  balance:
+    description: Kontostand anzeigen
+    usage: /balance [Spieler]
+    aliases: [bal, money, geld]
+    permission: louiseconomy.balance
+  baltop:
+    description: Die reichsten Spieler
+    usage: /baltop [Seite]
+    aliases: [top, reichste]
+    permission: louiseconomy.baltop
+  eco:
+    description: Geld verwalten (Admin)
+    usage: /eco <give|take|set> <Spieler> <Betrag>
+    permission: louiseconomy.admin
+  sell:
+    description: Items verkaufen
+    usage: /sell
+    aliases: [verkaufen]
+    permission: louiseconomy.sell
+  sellall:
+    description: Alles aus dem Inventar verkaufen (Menü)
+    usage: /sellall
+    aliases: [verkaufealles, sellinv]
+    permission: louiseconomy.sellall
+  shop:
+    description: Items und Blöcke kaufen
+    usage: /shop [Suchbegriff]
+    aliases: [kaufen, buy]
+    permission: louiseconomy.shop
+  worth:
+    description: Zeigt den Verkaufswert des Items in deiner Hand
+    usage: /worth
+    aliases: [wert]
+    permission: louiseconomy.worth
+  rang:
+    description: Rang anzeigen oder setzen
+    usage: /<command> [info <spieler>|set <spieler> <rang>]
+    aliases: [rank]
+  bank:
+    description: Bankkonto
+    usage: /<command> [kontostand|einzahlen <betrag>|abheben <betrag>]
+  staatskasse:
+    description: Staatskasse
+    usage: /<command> [info|einzahlen|abheben|zahlen|steuer]
+    aliases: [kasse, treasury]
+  sb:
+    description: Scoreboard ein-/ausschalten oder neu laden
+    usage: /sb [reload]
+permissions:
+  staat.admin:
+    description: Voller Zugriff auf Staatskasse und Raenge setzen
+    default: op
+  louisscoreboard.reload:
+    description: Scoreboard-Config neu laden
+    default: op
+  louiseconomy.sell:
+    default: true
+  louiseconomy.worth:
+    default: true
+  louiseconomy.shop:
+    default: true
+  louiseconomy.sellall:
+    default: true
+  louiseconomy.pay:
+    default: true
+  louiseconomy.balance:
+    default: true
+  louiseconomy.balance.others:
+    default: true
+  louiseconomy.baltop:
+    default: true
+  louiseconomy.admin:
+    default: op
